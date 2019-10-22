@@ -38,7 +38,7 @@ export default {
   methods: {
     downloadQT() {
       const urlObj = new URL(this.form.qtUrl);
-      const match = /\/channels\/(\d+)\/programs\/(\d+)\//.exec(urlObj.pathname);
+      const match = /\/channels\/(\d+)\/programs\/(\d+)/.exec(urlObj.pathname);
       const channelId = match && match[1];
       const programId = match && match[2];
       const downloadUrl = this.getRedirectUrl(channelId, programId);
